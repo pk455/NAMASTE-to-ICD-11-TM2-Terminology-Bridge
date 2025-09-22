@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAMASTE to ICD-11 (TM2) Terminology Bridge</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                <h1>NAMASTE to ICD-11 (TM2) Terminology Bridge</h1>
+            </div>
+            <p class="subtitle">Enabling Seamless Dual-Coding for India's 2016 EHR Standards.</p>
+        </header>
+
+        <main class="workflow-grid">
+            <div class="card" id="search-card">
+                <h2><span class="step-number">1</span> Search Diagnosis</h2>
+                <div class="input-wrapper">
+                    <input type="text" id="search-input" placeholder="e.g., 'fever' or 'vataja kasa'...">
+                    <div id="loader" class="loader" style="display: none;"></div>
+                </div>
+                <div class="results-container">
+                    <div class="results-column">
+                        <h3>NAMASTE (AYUSH) Results</h3>
+                        <ul id="namaste-results" class="results-list"></ul>
+                    </div>
+                    <div class="results-column">
+                        <h3>ICD-11 (Biomedical) Results</h3>
+                        <ul id="icd-results" class="results-list"></ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="entry-card" style="display: none; opacity: 0;">
+                <h2><span class="step-number">2</span> Construct Problem List Entry</h2>
+                <div id="selected-entry-content"></div>
+                <button id="create-bundle-btn" class="btn btn-primary">Generate FHIR Record</button>
+            </div>
+
+            <div class="card" id="bundle-card" style="display: none; opacity: 0;">
+                <h2><span class="step-number">3</span> Generated FHIR R4 Record</h2>
+                <p>The following compliant data package is ready for submission.</p>
+                <div class="code-container">
+                    <pre><code id="fhir-bundle-output"></code></pre>
+                </div>
+                <button id="submit-bundle-btn" class="btn btn-success">Submit Record Securely</button>
+            </div>
+        </main>
+    </div>
+
+    <div id="toast" class=""></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+

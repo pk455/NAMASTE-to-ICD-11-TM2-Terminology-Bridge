@@ -1,0 +1,6 @@
+NAMASTE_CODE,NAMASTE_TERM,ICD11_TM2_CODE,ICD11_TM2_TERM,SNOMED_BIOMEDICAL_CODE,SNOMED_BIOMEDICAL_TERM
+ASU001,Vataja Jvara,PJ20.0,Vata type pattern,386661006,Fever
+ASU002,Kaphaja Kasa,PJ41.1,Kapha type pattern,49727002,Cough
+ASU003,Pittaja Atisara,PJ60.2,Pitta type pattern,62315008,Diarrhea
+ASU004,Vataja Grahani,PJ61.0,Vata type pattern,409564008,Irritable bowel syndrome
+ASU005,Amlapitta,PJ62.2,Pitta type pattern,10259000,Gastroesophageal reflux disease
