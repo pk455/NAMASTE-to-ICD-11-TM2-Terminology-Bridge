@@ -28,7 +28,7 @@ python ingest.py
 # 1.4. Start the API Server (in the backend folder)
 uvicorn main:app --reload
 # The server will be running at [http://127.0.0.1:8000](http://127.0.0.1:8000)
-2. Launch the Frontend:Now that the backend is running, you can start the user interface.# 2.1. Open the 'frontend' folder in VS Code.
+2. Launch the Frontend: Now that the backend is running, you can start the user interface.# 2.1. Open the 'frontend' folder in VS Code.
 
 # 2.2. Right-click on the 'index.html' file.
 
